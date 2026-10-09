@@ -1,0 +1,48 @@
+{
+  "cliente": "Suricatus",
+  "evento": "Demonstração",
+  "jogo": "reflexo-relampago",
+  "pacotes": ["inatividade", "quiosque", "cadastro", "premios", "painel", "ranking", "sons", "efeitos", "metricas"],
+  "tempos": {
+    "partida": 40,
+    "comoJogar": 8,
+    "resultado": 10,
+    "final": 15,
+    "inatividade": 30,
+    "avisoInatividade": 10
+  },
+  "quiosque": {
+    "telaCheia": true,
+    "esconderCursor": true,
+    "bloquearSaida": true,
+    "fixarApp": true,
+    "orientacao": "automatica"
+  },
+  "cadastro": {
+    "campos": ["nome", "email", "telefone"],
+    "retencaoDias": 30
+  },
+  "premios": {
+    "brindes": [
+      { "id": "adesivo", "nome": "Adesivo Suricatus", "quantidade": 100 },
+      { "id": "chaveiro", "nome": "Chaveiro Suricatus", "quantidade": 50 },
+      { "id": "caneca", "nome": "Caneca Suricatus", "quantidade": 20 }
+    ],
+    "faixas": [
+      { "pontos": 4000, "brindes": ["adesivo", "chaveiro"] },
+      { "pontos": 5500, "brindes": ["caneca"] }
+    ]
+  },
+  "ranking": {
+    "periodo": "dia",
+    "tamanho": 10
+  },
+  "sons": {
+    "musica": 0.5,
+    "efeitos": 0.8
+  },
+  "painel": {
+    "senha": "2468"
+  },
+  "textos": {}
+}

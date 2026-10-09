@@ -1,0 +1,26 @@
+# ========== UNITY ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Burst (Unity)
+[Bb]urst/
+
+# ========== IDEs ==========
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# ========== OS ==========
+.DS_Store
+Thumbs.db
+
+# Build WebGL da demo do site (fica fora do Git)
+/docs/

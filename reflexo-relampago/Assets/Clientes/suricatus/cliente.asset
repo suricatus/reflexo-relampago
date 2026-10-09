@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2fa96c367d5854384c6cf8093c2f7c, type: 3}
+  m_Name: cliente
+  m_EditorClassIdentifier: Suricatus.FastDrive.Base::Suricatus.FastDrive.ClientBundle
+  clientId: suricatus
+  perfil: {fileID: 4900000, guid: 6321806cd560b794cb241b463a23408a, type: 3}
+  tema: {fileID: 4900000, guid: c6c979d0c1840874d9b71768da111ce8, type: 3}
+  logoHorizontal: {fileID: 2800000, guid: 1450f1f8efe0ea14bb5c65fd9b864019, type: 3}
+  logoQuadrado: {fileID: 2800000, guid: cd2aad19d46edd949bebd82229c06d5e, type: 3}
+  logoFundoEscuro: {fileID: 0}
+  fundoVertical: {fileID: 2800000, guid: d8e4e0c4ca1d1464fbf7297353e3c52a, type: 3}
+  fundoHorizontal: {fileID: 2800000, guid: 55cbf0268d11c274892df99fce5d3358, type: 3}
+  arteAtracao: {fileID: 2800000, guid: 80596bba49060234e8f43762d2cf7709, type: 3}
+  fonteTitulo: {fileID: 12800000, guid: 83e18b3c4f9bed948afe2a1a50db926b, type: 3}
+  fonteTexto: {fileID: 0}
+  botaoPrincipal: {fileID: 2800000, guid: db38843aeb3b71e4a88d69dae32c08ca, type: 3}
+  botaoPrincipalPressionado: {fileID: 2800000, guid: 15d9364c7dc257543a1dc37b40803116, type: 3}
+  botaoSecundario: {fileID: 2800000, guid: 7605442c181f6b54c886668d80ad912e, type: 3}
+  botaoSecundarioPressionado: {fileID: 2800000, guid: 9a16965b798e9b54197ad2ae88b359a4, type: 3}
+  botaoSair: {fileID: 2800000, guid: 18580321598c09041acbe075e64ab31f, type: 3}
+  cartao: {fileID: 0}
+  brindes: []
+  conteudo:
+  - {fileID: 4900000, guid: ab07d336696216a45874d5116c14a778, type: 3}
+  sons: []
+  artesDoJogo:
+  - {fileID: 2800000, guid: 2884343f4591c5a489c1ccc2ae322cb1, type: 3}
+  - {fileID: 2800000, guid: 724236db78265264e8df66116e5ee6d0, type: 3}
+  - {fileID: 2800000, guid: 9645ffb1b3fbee64ab243bfcc580cfb0, type: 3}
+  - {fileID: 2800000, guid: 04f814920f98cf04eac61022cff46a55, type: 3}
+  - {fileID: 2800000, guid: 89441314bb8f7764d8f8adbbed3989e1, type: 3}
+  - {fileID: 2800000, guid: 5a1acae82708f4949b8c584cd5ac4326, type: 3}

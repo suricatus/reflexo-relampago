@@ -1,0 +1,20 @@
+{
+  "fases": {
+    "aquecimento": { "segundos": 10, "tempoNaTela": 1.6, "intervalo": 0.5, "tamanho": 0.34, "distracoes": 0 },
+    "desafio": { "tempoNaTela": 1.2, "intervalo": 0.35, "tamanho": 0.28, "distracoes": 0.3 },
+    "sprint": { "segundos": 10, "tempoNaTela": 0.85, "intervalo": 0.15, "tamanho": 0.28, "distracoes": 0.3 }
+  },
+  "pontosPorAcerto": 100,
+  "bonusRapido": { "pontos": 50, "inteiroAte": 0.3, "zeraEm": 1.0 },
+  "penalidadeDistracao": 50,
+  "faixas": [
+    { "nome": "Medalha de Bronze", "pontos": 0 },
+    { "nome": "Medalha de Prata", "pontos": 4000, "vitoria": true },
+    { "nome": "Medalha de Ouro", "pontos": 5500, "vitoria": true }
+  ],
+  "comoJogar": [
+    "Toque nos suricatos assim que aparecerem",
+    "Quanto mais rápido, mais pontos",
+    "Não toque no X vermelho: tira pontos"
+  ]
+}

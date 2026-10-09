@@ -1,0 +1,129 @@
+/* Reflexo Relâmpago: só o que é próprio do jogo. O resto do layout vem do FastDrive.uss.
+   Medidas em px na referência 1080 × 1920 (vertical) e 1920 × 1080 (horizontal). Cores vêm do tema, pelo código. */
+
+/* ---------- Área do jogo (quadrada) ---------- */
+.fd-card.rr-arena { flex-grow: 1; padding: 20px; }
+.fd-landscape .fd-card.rr-arena { padding: 16px; }
+/* Posição e tamanho das peças são em % deste campo, que é quadrado. */
+.rr-field { flex-grow: 1; overflow: hidden; }
+
+.rr-piece {
+    position: absolute;
+    transition-property: scale, opacity, rotate;
+    transition-duration: 0.16s, 0.16s, 0.16s;
+    transition-timing-function: ease-out-back, ease-out-cubic, ease-out-cubic;
+}
+.rr-piece--enter { scale: 0.2 0.2; opacity: 0; transition-duration: 0s, 0s, 0s; }
+.rr-piece--hit {
+    scale: 1.35 1.35; opacity: 0;
+    transition-duration: 0.2s, 0.2s, 0.2s;
+    transition-timing-function: ease-out-cubic, ease-out-cubic, ease-out-cubic;
+}
+.rr-piece--expired {
+    scale: 0.4 0.4; opacity: 0;
+    transition-duration: 0.24s, 0.24s, 0.24s;
+    transition-timing-function: ease-in-cubic, ease-in-cubic, ease-in-cubic;
+}
+.rr-piece--wrong {
+    scale: 0.7 0.7; rotate: 25deg; opacity: 0;
+    transition-duration: 0.26s, 0.26s, 0.26s;
+    transition-timing-function: ease-out-cubic, ease-in-cubic, ease-out-cubic;
+}
+.rr-piece--gone {
+    scale: 0.8 0.8; opacity: 0;
+    transition-duration: 0.2s, 0.2s, 0.2s;
+    transition-timing-function: ease-in-cubic, ease-in-cubic, ease-in-cubic;
+}
+
+/* ---------- Alvo e distração (área do jogo e legenda) ---------- */
+.rr-look { flex-grow: 1; }
+/* O halo do alvo encolhe durante o tempo na tela; a duração vem do código. */
+.rr-look__halo {
+    position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+    border-top-left-radius: 50%; border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;
+    transition-property: scale;
+    transition-timing-function: linear;
+}
+.rr-look__halo--closing { scale: 0.45 0.45; }
+.rr-look__art {
+    position: absolute; left: 3%; top: 3%; right: 3%; bottom: 3%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+/* Desenhos de reserva, quando o cliente não tem arte: alvo de tiro e X. */
+.rr-look__disc {
+    position: absolute; left: 8%; top: 8%; right: 8%; bottom: 8%;
+    border-top-left-radius: 50%; border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;
+    align-items: center; justify-content: center;
+}
+.rr-look__ring {
+    width: 64%; height: 64%;
+    border-top-left-radius: 50%; border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;
+    align-items: center; justify-content: center;
+}
+.rr-look__dot {
+    width: 50%; height: 50%;
+    border-top-left-radius: 50%; border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;
+}
+.rr-look__bar {
+    position: absolute; left: 18%; top: 42%; width: 64%; height: 16%;
+    border-top-left-radius: 8px; border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;
+}
+
+/* ---------- Retornos de toque ---------- */
+.rr-float {
+    position: absolute;
+    font-size: 72px;
+    margin: 0; padding: 0;
+    translate: -50% -50%;
+    transition-property: translate, opacity;
+    transition-duration: 0.6s, 0.6s;
+    transition-timing-function: ease-out-cubic, ease-in-cubic;
+}
+.rr-float--up { translate: -50% -170%; opacity: 0; }
+
+.rr-ripple {
+    position: absolute;
+    width: 96px; height: 96px;
+    translate: -50% -50%;
+    border-top-width: 6px; border-right-width: 6px; border-bottom-width: 6px; border-left-width: 6px;
+    border-top-left-radius: 48px; border-top-right-radius: 48px;
+    border-bottom-left-radius: 48px; border-bottom-right-radius: 48px;
+    opacity: 0.7;
+    transition-property: scale, opacity;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease-out-cubic, ease-out-cubic;
+}
+.rr-ripple--out { scale: 1.7 1.7; opacity: 0; }
+
+/* ---------- Área de apoio: fase, acertos, precisão e legenda ---------- */
+.fd-card.rr-panel { flex-grow: 1; padding: 32px 48px 32px 48px; justify-content: space-between; }
+.fd-landscape .fd-card.rr-panel { padding: 56px 48px 56px 48px; justify-content: space-around; }
+
+.rr-panel .rr-panel__phase {
+    font-size: 72px;
+    flex-shrink: 0;
+    transition-property: scale;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-out-back;
+}
+.fd-landscape .rr-panel .rr-panel__phase { font-size: 72px; }
+.rr-panel .rr-panel__phase--pop { scale: 1.25 1.25; transition-duration: 0s; }
+
+.rr-stats { flex-direction: row; justify-content: space-around; flex-shrink: 0; }
+.rr-stat { align-items: center; width: 50%; }
+.rr-panel .rr-stat__value { font-size: 112px; }
+.fd-landscape .rr-panel .rr-stat__value { font-size: 128px; }
+.rr-panel .rr-stat__label { font-size: 40px; }
+.fd-landscape .rr-panel .rr-stat__label { font-size: 40px; }
+
+.rr-legend { flex-direction: row; justify-content: center; flex-shrink: 0; }
+.rr-legend__item { flex-direction: row; align-items: center; margin-left: 32px; margin-right: 32px; }
+.rr-legend__icon { width: 112px; height: 112px; margin-right: 20px; flex-shrink: 0; }
+.fd-landscape .rr-legend__icon { width: 128px; height: 128px; }
+.rr-panel .rr-legend__label { font-size: 48px; -unity-text-align: middle-left; }
+.fd-landscape .rr-panel .rr-legend__label { font-size: 48px; }

@@ -1,0 +1,14 @@
+{
+  "cores": {
+    "primaria": "#F7B32B",
+    "textoSobrePrimaria": "#14284B",
+    "secundaria": "#E3E6EC",
+    "fundoCartao": "#FFFFFF",
+    "texto": "#14284B",
+    "textoSuave": "#4A5A78",
+    "acerto": "#2FAE5C",
+    "erro": "#E5483A"
+  },
+  "cantos": "arredondado",
+  "fundoEscuro": true
+}
